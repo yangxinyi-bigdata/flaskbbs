@@ -1,0 +1,13 @@
+Flask==2.2.5
+Flask-Mail==0.9.1
+Flask-Migrate==4.0.7
+Flask-SQLAlchemy==3.0.2
+Flask-WTF==1.2.1
+WTForms~=3.1.2
+alembic~=1.13.1
+SQLAlchemy~=2.0.25
+pymysql
+Werkzeug~=2.3.8
+shortuuid~=1.0.13
+celery~=5.4.0
+pillow~=10.3.0
