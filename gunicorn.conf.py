@@ -7,4 +7,3 @@ accesslog = "/var/log/pythonbbs/gunicorn_access.log"
 errorlog = "/var/log/pythonbbs/gunicorn_error.log"
 preload_app = True
 daemon = True
-
