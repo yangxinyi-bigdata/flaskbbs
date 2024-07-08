@@ -8,5 +8,15 @@
       <jdbc-url>jdbc:mysql://139.9.182.20:3307</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="腾讯云mysql" uuid="65a3979f-cf9f-4e30-867f-b1a21f48d190">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://43.136.124.222:3306/</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <driver-properties>
+        <property name="useSSL" value="TRUE" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

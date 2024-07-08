@@ -8,13 +8,13 @@ BASE_DIR = os.path.dirname(__file__)  # 项目根路径
 PERMANENT_SESSION_LIFETIME = timedelta(days=7)
 
 # MySQL所在的主机名
-HOSTNAME = "139.9.182.20"
+HOSTNAME = "43.136.124.222"
 # MySQL监听的端口号，默认3306
-PORT = 3307
+PORT = 3306
 # 连接MySQL的用户名，读者用自己设置的
-USERNAME = "root"
+USERNAME = "pythonbbs"
 # 连接MySQL的密码，读者用自己的
-PASSWORD = "yy3534365"
+PASSWORD = "EZHJC6zSDYNGPCHX"
 # MySQL上创建的数据库名称
 DATABASE = "pythonbbs"
 
