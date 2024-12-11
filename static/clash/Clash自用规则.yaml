@@ -3578,6 +3578,16 @@ rules:
 - DOMAIN-SUFFIX,microvpn.com,🚀 节点选择
 - DOMAIN-SUFFIX,middle-way.net,🚀 节点选择
 - DOMAIN-SUFFIX,microsoft.com,🚀 节点选择
+- DOMAIN-SUFFIX,access-point.cloudmessaging.edge.microsoft.com,🚀 节点选择
+- DOMAIN-SUFFIX,browser.pipe.aria.microsoft.com,🚀 节点选择
+- DOMAIN-SUFFIX,www.bingapis.com,🚀 节点选择
+- DOMAIN-SUFFIX,sydney.bing.com,🚀 节点选择
+- DOMAIN-SUFFIX,prod.do.dsp.mp.microsoft.com,🚀 节点选择
+- DOMAIN-SUFFIX,events.data.microsoft.com,🚀 节点选择
+- DOMAIN-SUFFIX,designer.microsoft.com,🚀 节点选择
+- DOMAIN-SUFFIX,edge.microsoft.com,🚀 节点选择
+- DOMAIN-SUFFIX,copilot.microsoft.com,🚀 节点选择
+- DOMAIN-SUFFIX,edgeservices.bing.com,🚀 节点选择
 - DOMAIN-SUFFIX,mihk.hk,🚀 节点选择
 - DOMAIN-SUFFIX,mihr.com,🚀 节点选择
 - DOMAIN-SUFFIX,mihua.org,🚀 节点选择
