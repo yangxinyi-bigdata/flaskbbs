@@ -385,10 +385,11 @@ proxy-groups:
     - 香港200M
     - 美国家庭IP
 - name: GPT专用
-  type: select
+  type: url-test
   proxies:
   - 莱卡云韩国20M
   - 链式代理
+  url: 'http://chatgpt.com'
 - name: 🚀 节点选择
   type: select
   proxies:
