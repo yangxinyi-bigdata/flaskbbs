@@ -389,7 +389,8 @@ proxy-groups:
   proxies:
   - 莱卡云韩国20M
   - 链式代理
-  url: 'http://chatgpt.com'
+  url: http://chatgpt.com
+  interval: 300
 - name: 🚀 节点选择
   type: select
   proxies:
