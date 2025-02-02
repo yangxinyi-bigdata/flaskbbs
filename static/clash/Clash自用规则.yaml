@@ -387,6 +387,7 @@ proxy-groups:
 - name: GPT专用
   type: select
   proxies:
+  - 莱卡云韩国20M
   - 链式代理
 - name: 🚀 节点选择
   type: select
