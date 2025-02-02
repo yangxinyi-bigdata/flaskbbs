@@ -20,6 +20,20 @@ proxies:
   port: 8881
   cipher: aes-256-gcm
   password: yy3534365
+- name: 香港200M
+  type: vmess
+  server: 47.76.36.155
+  port: 8882
+  uuid: 566a794f-4bf1-478f-b764-f43fa855b055
+  alterId: 0
+  cipher: auto
+  tls: false
+  network: ws
+  ws-opts:
+    path: "/566a794f"
+    headers:
+      Host: 47.76.36.155
+  udp: true
 - name: 🇼🇸 台湾 A01V
   type: vmess
   server: node-1201.yh82l3dsytxzf8.com
@@ -348,26 +362,58 @@ proxies:
   alterId: 0
   cipher: auto
   udp: false
+- name: 美国家庭IP
+  type: socks5
+  server: 45.45.200.25
+  port: 5812
+  username: xrfxobto
+  password: ffl6q2zqpxkf
+  udp: true
 proxy-groups:
-- name: GPT专用
-  type: select
-  proxies:
-  - 莱卡云韩国20M
-  - 🇭🇰 香港 A07V
 - name: 自动切换
   type: url-test
   proxies:
   - 亚马逊新加坡
   - 🇭🇰 香港 A01V
   - 莱卡云韩国20M
+  - 香港200M
   url: http://google.com
   interval: 300
+- name: 链式代理
+  type: relay
+  proxies:
+    - 香港200M
+    - 美国家庭IP
+- name: GPT专用
+  type: select
+  proxies:
+  - 链式代理
 - name: 🚀 节点选择
   type: select
   proxies:
   - 自动切换
   - 莱卡云韩国20M
+  - 香港200M
   - 亚马逊新加坡
+  - 链式代理
+  - 🇭🇰 香港 A01V
+  - 🇭🇰 香港 A02V
+  - 🇭🇰 香港 A03V
+  - 🇭🇰 香港 A04V
+  - 🇭🇰 香港 A05V
+  - 🇭🇰 香港 A06V
+  - 🇭🇰 香港 A07V
+  - 🇭🇰 香港 A08V
+  - 🇭🇰 香港 A09V
+  - 🇭🇰 香港 A10V
+  - 🇭🇰 香港 A11V
+  - 🇭🇰 香港 A12V
+  - 🇭🇰 香港 B01V
+  - 🇭🇰 香港 B02V
+  - 🇭🇰 香港 B03V
+  - 🇭🇰 香港 B04V
+  - 🇭🇰 香港 B05V
+  - 🇭🇰 香港 B06V
   - 🇼🇸 台湾 A01V
   - 🇼🇸 台湾 A02V
   - 🇼🇸 台湾 A03V
@@ -391,24 +437,7 @@ proxy-groups:
   - 🇺🇲 美国 A03V
   - 🇺🇲 美国 A04V
   - 🇺🇲 美国 B01V
-  - 🇭🇰 香港 A01V
-  - 🇭🇰 香港 A02V
-  - 🇭🇰 香港 A03V
-  - 🇭🇰 香港 A04V
-  - 🇭🇰 香港 A05V
-  - 🇭🇰 香港 A06V
-  - 🇭🇰 香港 A07V
-  - 🇭🇰 香港 A08V
-  - 🇭🇰 香港 A09V
-  - 🇭🇰 香港 A10V
-  - 🇭🇰 香港 A11V
-  - 🇭🇰 香港 A12V
-  - 🇭🇰 香港 B01V
-  - 🇭🇰 香港 B02V
-  - 🇭🇰 香港 B03V
-  - 🇭🇰 香港 B04V
-  - 🇭🇰 香港 B05V
-  - 🇭🇰 香港 B06V
+
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -417,13 +446,15 @@ proxy-groups:
 - name: 🐟 漏网之鱼
   type: select
   proxies:
-  - 🚀 节点选择
   - DIRECT
+  - 🚀 节点选择
+
 rules:
 # - DOMAIN-SUFFIX,steampipe.steamcontent.tnkjmec.com,🚀 节点选择
 # - DOMAIN-SUFFIX,steampowered.com,🚀 节点选择
 # - DOMAIN-SUFFIX,steamstatic.com,🚀 节点选择
 - DOMAIN-SUFFIX,theb.ai,🚀 节点选择
+- DOMAIN-SUFFIX,arc.net,🚀 节点选择
 - DOMAIN-SUFFIX,1password.com,🚀 节点选择
 - DOMAIN-SUFFIX,adguard.org,🚀 节点选择
 - DOMAIN-SUFFIX,bit.no.com,🚀 节点选择
@@ -2456,7 +2487,7 @@ rules:
 - DOMAIN-SUFFIX,google.com.vn,🚀 节点选择
 - DOMAIN-SUFFIX,openai.com,GPT专用
 - DOMAIN-SUFFIX,chatgpt.com,GPT专用
-- DOMAIN-SUFFIX,gravatar.com,亚马逊新加坡
+- DOMAIN-SUFFIX,gravatar.com,GPT专用
 - DOMAIN-SUFFIX,oaistatic.com,GPT专用
 - DOMAIN-SUFFIX,imgix.net,GPT专用
 - DOMAIN-SUFFIX,vimeocdn.com,GPT专用
