@@ -383,11 +383,17 @@ proxy-groups:
   proxies:
     - 香港200M
     - 美国家庭IP
+- name: 美美链式
+  type: relay
+  proxies:
+    - 🇺🇲 美国 A02V
+    - 美国家庭IP
 - name: GPT专用
   type: select
   proxies:
   - 莱卡云韩国20M
   - 链式代理
+  - 美美链式
 - name: 🚀 节点选择
   type: select
   proxies:
@@ -396,6 +402,7 @@ proxy-groups:
   - 香港200M
   - 亚马逊新加坡
   - 链式代理
+  - 美美链式
   - 🇭🇰 香港 A01V
   - 🇭🇰 香港 A02V
   - 🇭🇰 香港 A03V
